@@ -1,0 +1,42 @@
+File Structure
+
+docker-projects/
+├── laravel/
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   ├── nginx/
+│   │   └── default.conf
+│   ├── .env
+│   └── README.md
+│
+├── vue-docker-app/
+│   ├── Dockerfile
+│   ├── .dockerignore
+│   ├── package.json
+│   ├── src/
+│   └── README.md
+│
+└── README.md
+
+Needed Technologies:
+
+Laravel
+Vue.js (Vite)
+Docker & Docker Compose
+Nginx
+MySQL
+Node.js (v20)
+PHP 8+
+
+How to Run:
+
+For Laravel:
+cd laravel
+docker-compose up -d
+http://localhost:8080
+
+For Vue:
+cd vue-docker-app
+docker build -t vue-docker-app .
+docker run -d -p 3080:80 vue-docker-app
+http://localhost:3000:80
